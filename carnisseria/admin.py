@@ -8,3 +8,4 @@ from carnisseria import models
 admin.site.register(models.Botiga)
 admin.site.register(models.Carns)
 admin.site.register(models.Precuinats)
+admin.site.register(models.Ofertes)
