@@ -16,7 +16,44 @@
               {% endblock %}
   		</nav><!-- / nav -->
   </header>
-  
+  <section id="main-content">
+		<article>
+			<header>
+				{% block header %}<h1>Informació botiga</h1> {% endblock %}
+			</header>
+      <table border="1" width="600">
+        <tr>
+          <td>Nif</td>
+          <td>Nom</td>
+          <td>Carrer</td>
+          <td>Numero</td>
+          <td>Ciutat</td>
+          <td>Codi Postal</td>
+          <td>Provincia</td>
+          <td>Pais</td>
+          <td>Telefon</td>
+        </tr>
+
+        {% for botiga in botiga %}
+        <tr>
+            <td>{{botiga.Nif}}</td>
+            <td>{{botiga.name}}</td>
+            <td>{{botiga.street}}</td>
+            <td>{{botiga.number}}</td>
+            <td>{{botiga.city}}</td>
+            <td>{{botiga.zipCode}}</td>
+            <td>{{botiga.stateOrProvince}}</td>
+            <td>{{botiga.country}}</td>
+            <td>{{botiga.telephone}}</td>
+        </tr>
+        {% endfor %}
+
+
+			</div>
+
+		</article> <!-- /article -->
+
+</section>
 
   </body>
 </html>

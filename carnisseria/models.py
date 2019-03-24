@@ -10,7 +10,6 @@ from django.urls import reverse
 from datetime import date
 import datetime
 
-
 class Botiga(models.Model):
     Nif = models.TextField(blank=True, null=True)
     name = models.TextField(blank=True, null=True)
