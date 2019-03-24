@@ -58,8 +58,8 @@ class Precuinats(models.Model):
 class Ofertes(models.Model):
     name = models.TextField()
     description = models.TextField(blank=True, null=True)
-    price_old = models.DecimalField('Euro amount', max_digits=8, decimal_places=2, blank=True,null=True)
-    price_offer = models.DecimalField('Euro amount', max_digits=8, decimal_places=2, blank=True,null=True)
+    price_old = models.DecimalField('Preu vell', max_digits=8, decimal_places=2, blank=True,null=True)
+    price_offer = models.DecimalField('Preu oferta', max_digits=8, decimal_places=2, blank=True,null=True)
     user = models.ForeignKey(User, default=1, on_delete=models.SET_DEFAULT)
     botiga = models.ForeignKey(Botiga, null=True, related_name='ofertes', on_delete=models.PROTECT)
 
