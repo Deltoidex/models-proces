@@ -10,7 +10,7 @@ from . import views
 
 urlpatterns = [
     # Restaurant details, ex.: /myrestaurants/restaurants/1/
-    path('', views.Homepage, name='homepage'),
-    #path('carns/', views.carns, name='carns'),
-    #path('precuinats/', views.precuinats, name='precuinats'),
+    path('', views.homepage, name='homepage'),
+    path('carns/', views.carns, name='carns'),
+    path('precuinats/', views.precuinats, name='precuinats'),
 ]
