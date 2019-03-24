@@ -5,6 +5,35 @@
     <title></title>
   </head>
   <body>
-    <h1>hola</h1>
+    <h1>CARNS</h1>
+    <section id="main-content">
+  		<article>
+  			<header>
+  				{% block header %}<h1>Les nostres carns</h1> {% endblock %}
+  			</header>
+        <table border="1" width="1000">
+          <tr>
+            <td>Nom</td>
+            <td>Descripció</td>
+            <td>Preu</td>
+            <td>Data</td>
+            <td>Origen</td>
+            <td>Tipus</td>
+          </tr>
+
+          {% for carns in carns %}
+          <tr>
+              <td>{{carns.name}}</td>
+              <td>{{carns.description}}</td>
+              <td>{{carns.price}}</td>
+              <td>{{carns.date}}</td>
+              <td>{{carns.origin}}</td>
+              <td>{{carns.type}}</td>
+          </tr>
+          {% endfor %}
+  			</div>
+  		</article> <!-- /article -->
+
+  </section>
   </body>
 </html>

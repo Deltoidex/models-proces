@@ -46,7 +46,6 @@ class Precuinats(models.Model):
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField('Euro amount', max_digits=8, decimal_places=2, blank=True,null=True)
     user = models.ForeignKey(User, default=1, on_delete=models.SET_DEFAULT)
-    date = models.DateField(default=date.today)
     botiga = models.ForeignKey(Botiga, null=True, related_name='precuinats', on_delete=models.PROTECT)
     elaboration_date = models.DateField(default=datetime.date.today)
     caducity_date = models.DateField(default=datetime.date.today)

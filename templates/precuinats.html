@@ -5,6 +5,35 @@
     <title></title>
   </head>
   <body>
+    <section id="main-content">
+      <article>
+        <header>
+          {% block header %}<h1>Plats precuinats</h1> {% endblock %}
+        </header>
+        <table border="1" width="1000">
+          <tr>
+            <td>Nom</td>
+            <td>Descripció</td>
+            <td>Preu</td>
+            <td>Data d'elaboració</td>
+            <td>Data de caducitat</td>
+          </tr>
+          {% for precuinats in precuinats %}
+          <tr>
+              <td>{{precuinats.name}}</td>
+              <td>{{precuinats.description}}</td>
+              <td>{{precuinats.price}}</td>
+              <td>{{precuinats.elaboration_date}}</td>
+              <td>{{precuinats.caducity_date}}</td>
+          </tr>
+          {% endfor %}
+
+
+        </div>
+
+      </article> <!-- /article -->
+
+    </section>
 
   </body>
 </html>

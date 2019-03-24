@@ -7,19 +7,12 @@ from .models import *
 # Create your views here.
 def homepage(request):
     botiga = Botiga.objects.all()
-    
-    #carns = Carns.objects.all()
-    #precuinats= Precuinats.objects.all()
     return render(request,'homepage.html',context= {'botiga': botiga})
 
 def carns(request):
-    #botiga = Botiga.objects.all()
-    #carns= Carns.objects.all()
-    #precuinats= Precuinats.objects.all()
-    return render(request,'carns.html')
+    carns = Carns.objects.all()
+    return render(request,'carns.html',context= {'carns': carns})
 
 def precuinats(request):
-    #botiga = Botiga.objects.all()
-    #carns= Carns.objects.all()
-    #precuinats= Precuinats.objects.all()
-    return render(request,'precuinats.html')
+    precuinats = Precuinats.objects.all()
+    return render(request,'precuinats.html',context= {'precuinats': precuinats})
