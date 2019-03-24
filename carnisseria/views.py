@@ -16,3 +16,7 @@ def carns(request):
 def precuinats(request):
     precuinats = Precuinats.objects.all()
     return render(request,'precuinats.html',context= {'precuinats': precuinats})
+
+def ofertes(request):
+    ofertes = Ofertes.objects.all()
+    return render(request,'ofertes.html',context= {'ofertes': ofertes})

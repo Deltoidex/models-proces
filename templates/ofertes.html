@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>OFERTES!</h1>
+    <section id="main-content">
+  		<article>
+  			<header>
+  				{% block header %}<h1>Ofertes del dia</h1> {% endblock %}
+  			</header>
+        <table border="1" width="1000">
+          <tr>
+            <td>Nom</td>
+            <td>Descripcio</td>
+            <td>Preu sense descompte</td>
+            <td>Preu amb descompte</td>
+          </tr>
+          {% for ofertes in ofertes %}
+          <tr>
+              <td>{{ofertes.name}}</td>
+              <td>{{ofertes.description}}</td>
+              <td>{{ofertes.price_old}}</td>
+              <td>{{ofertes.price_offer}}</td>
+          </tr>
+          {% endfor %}
+  			</div>
+  		</article> <!-- /article -->
+
+  </section>
+
+  </body>
+</html>

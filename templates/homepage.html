@@ -8,13 +8,11 @@
     <h1>Botiga</h1>
     <header id="main-header">
   		<nav>
-              {% block sidebar %}
                   <ul>
                       <li><a class="site-name" href="/carns">CARNS</a></li>
                       <li><a class="site-name" href="/precuinats">PRECUINATS</a></li>
                   </ul>
-              {% endblock %}
-  		</nav><!-- / nav -->
+  		</nav>
   </header>
   <section id="main-content">
 		<article>
@@ -47,12 +45,8 @@
             <td>{{botiga.telephone}}</td>
         </tr>
         {% endfor %}
-
-
 			</div>
-
-		</article> <!-- /article -->
-
+		</article>
 </section>
 
   </body>
